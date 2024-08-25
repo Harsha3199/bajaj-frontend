@@ -68,10 +68,19 @@ const Home = () => {
                     isDisabled: false
                 }))
             );
-            if (selectedValues.includes('number')) {
-                setFilterType('number');
+            // if (selectedValues.includes('number')) {
+            //     setFilterType('number');
+            // } else if (selectedValues.includes('alphabets')) {
+            //     setFilterType('alphabets');
+            // } else {
+            //     setFilterType('');
+            // }
+            if (selectedValues.includes('alphabets') && (selectedValues.includes('number'))) {
+                setFilterType('both');
             } else if (selectedValues.includes('alphabets')) {
                 setFilterType('alphabets');
+            } else if ( selectedValues.includes('number')) {
+                setFilterType('number');
             } else {
                 setFilterType('');
             }
