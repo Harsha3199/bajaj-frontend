@@ -81,7 +81,7 @@ const Home = () => {
     const handleSubmitData = async (data) => {
         try {
             const processedData = processInput(data);
-            const response = await axios.post('http://localhost:4000/bfhl', processedData);
+            const response = await axios.post('https://api-bajaj-dun.vercel.app/bfhl', processedData);
             const responseData = response.data;
             setData(responseData);
             localStorage.setItem('data', JSON.stringify(responseData));
